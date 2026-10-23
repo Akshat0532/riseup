@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>RiseUp — Un-Snoozeable Alarm</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="card">
+  <header>
+    <h1>⏰ RiseUp</h1>
+    <p class="sub">Recurring alarms. No snooze. Prove you're awake.</p>
+  </header>
+
+  <section id="setup">
+    <label>Alarm time</label>
+    <input type="time" id="timeInput">
+    <label>Repeat</label>
+    <select id="repeat">
+      <option value="once">Once</option>
+      <option value="daily">Every day</option>
+      <option value="weekdays">Mon–Fri</option>
+      <option value="weekends">Sat–Sun</option>
+    </select>
+    <label>Dismiss difficulty</label>
+    <select id="mode">
+      <option value="full">Full gauntlet (math + typing + movement)</option>
+      <option value="math">Math + typing</option>
+      <option value="motion">Movement only</option>
+      <option value="code">Walk-away secret code only</option>
+    </select>
+    <label>Secret code (optional) — write it on paper FAR from your bed</label>
+    <input id="secretCode" maxlength="8" placeholder="e.g. 4821" autocomplete="off" inputmode="numeric">
+    <button id="armBtn">Add Alarm</button>
+    <button id="installBtn" class="btn-sm" hidden>📲 Install app</button>
+  </section>
+
+  <div class="status" id="status">Keep this tab running. Alarms are saved on this device.</div>
+  <div id="alarmList"></div>
+  <p class="hint" style="text-align:center">Install to your home screen for the best alarm experience.</p>
+</main>
+
+<div id="wake" role="dialog" aria-label="Alarm ringing">
+  <h2>WAKE UP! 🚨</h2>
+  <div class="time" id="wakeTime"></div>
+  <div class="stage" id="stageBox"></div>
+</div>
+<div id="target"></div>
+
+<script src="js/challenges.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "RiseUp — Un-Snoozeable Alarm",
+  "short_name": "RiseUp",
+  "description": "A smart alarm clock with no snooze. Prove you're awake with math, typing, movement, and a walk-away secret code.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "192x192", "type": "image/svg+xml" },
+    { "src": "icon.svg", "sizes": "512x512", "type": "image/svg+xml" }
+  ]
+}
